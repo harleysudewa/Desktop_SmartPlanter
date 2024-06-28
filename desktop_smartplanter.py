@@ -37,12 +37,12 @@ def main():
     fig.suptitle("Smart Planter Sensor Data Plot")
     
     myplot = {
-        'soil_moisture': sensorplot(axs[0, 0], "Soil Moisture", 'r'),
-        'humidity': sensorplot(axs[0, 1], "Humidity", 'b'),
-        'rain': sensorplot(axs[0, 2], "Rain", 'g'),
-        'temperature': sensorplot(axs[1, 0], "Temperature", 'm'),
-        'light': sensorplot(axs[1, 1], "Light", 'y'),
-        'air_pressure': sensorplot(axs[1, 2], "Air Pressure", 'c')
+        'soil_moisture': sensorplot(axs[0, 0], "Soil Moisture (%)", 'r'),
+        'humidity': sensorplot(axs[0, 1], "Humidity (%)", 'b'),
+        'rain': sensorplot(axs[0, 2], "Rain (%)", 'g'),
+        'temperature': sensorplot(axs[1, 0], "Temperature (C)", 'm'),
+        'light': sensorplot(axs[1, 1], "Light (lux)", 'y'),
+        'air_pressure': sensorplot(axs[1, 2], "Air Pressure (hPA)", 'c')
     }
 
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
